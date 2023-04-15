@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import net.braniumacademy.exception.InvalidDateOfBirthException;
 import net.braniumacademy.exception.InvalidEmailException;
@@ -11,6 +13,7 @@ import net.braniumacademy.exception.InvalidNameException;
 import net.braniumacademy.exception.InvalidPersonIdException;
 import net.braniumacademy.exception.InvalidPhoneNumberException;
 import net.braniumacademy.exception.InvalidStudentIdException;
+import net.braniumacademy.model.Person;
 import net.braniumacademy.model.Student;
 import net.braniumacademy.model.Subject;
 
@@ -80,27 +83,36 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Thêm mới sinh viên");
+        jLabel1.setText("Update Student");
 
         btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnUpdate.setText("Cập nhật");
+        btnUpdate.setText("SAVE");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnClear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnClear.setText("Xóa dữ liệu");
+        btnClear.setText("CLEAR");
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnCancel.setText("Hủy bỏ");
+        btnCancel.setText("CANCEL");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin cá nhân", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Personal Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Số CMND/CC/HC: ");
+        jLabel2.setText("Personal ID:");
 
-        txtPersonId.setEditable(false);
         txtPersonId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtPersonId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPersonIdActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Họ và tên: ");
+        jLabel3.setText("Full Name:");
 
         txtPersonName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -112,7 +124,7 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Ngày sinh");
+        jLabel4.setText("Date of Birth:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Email: ");
@@ -120,12 +132,12 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
         txtPersonAddress.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel10.setText("Số ĐT: ");
+        jLabel10.setText("Phone Number:");
 
         txtPersonEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel11.setText("Địa chỉ: ");
+        jLabel11.setText("Address:");
 
         txtPersonPhoneNumber.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -136,14 +148,12 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5)
-                        .addComponent(jLabel4)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)))
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4)
                     .addComponent(jLabel10)
-                    .addComponent(jLabel11))
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -185,29 +195,28 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin sinh viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Student Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("Mã sinh viên: ");
+        jLabel6.setText("Student ID:");
 
-        txtStudentId.setEditable(false);
         txtStudentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("Lớp: ");
+        jLabel7.setText("Class:");
 
         txtStudentClass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         comboMajor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        comboMajor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Công nghệ thông tin", "Điện tử", "Viễn thông", "Quản trị kinh doanh", "Khoa học dữ liệu" }));
+        comboMajor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computer Science", "Graphic & Digital Design", "Event Management", "Marketing", "Public Relations & Communications" }));
 
         txtSchoolYear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("Chuyên ngành: ");
+        jLabel8.setText("Major:");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setText("Niên khóa: ");
+        jLabel9.setText("Valid:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -239,7 +248,7 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtStudentClass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(comboMajor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
@@ -261,13 +270,13 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 19, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
-                        .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70)
+                        .addComponent(btnClear)
+                        .addGap(67, 67, 67)
                         .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(69, 69, 69)))
                 .addContainerGap())
@@ -286,7 +295,7 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
                     .addComponent(btnClear)
                     .addComponent(btnCancel)
                     .addComponent(btnUpdate))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
@@ -295,6 +304,14 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
     private void txtPersonDobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonDobActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPersonDobActionPerformed
+
+    private void txtPersonIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPersonIdActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -402,7 +419,7 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
         txtSchoolYear.setText(emptyText);
     }
 
-    private void editStudent() {
+  private void editStudent() {
         var pId = txtPersonId.getText();
         var fullName = txtPersonName.getText();
         var dobStr = txtPersonDob.getText();

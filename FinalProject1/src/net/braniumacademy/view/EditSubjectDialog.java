@@ -54,35 +54,50 @@ public class EditSubjectDialog extends javax.swing.JDialog implements ActionList
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Thêm mới môn học");
+        jLabel1.setText("Edit Subject");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Mã môn học: ");
+        jLabel2.setText("SUBJECT CODE:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Tên môn học: ");
+        jLabel3.setText("SUBJECT NAME:");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Loại môn học: ");
+        jLabel4.setText("PROGRAM:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Số tiết học: ");
+        jLabel5.setText("SLOTS:");
 
         txtSubjectId.setEditable(false);
         txtSubjectId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSubjectId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSubjectIdActionPerformed(evt);
+            }
+        });
 
         txtSubjectName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSubjectName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSubjectNameActionPerformed(evt);
+            }
+        });
 
         txtNumOfLesson.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         comboSubjectType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        comboSubjectType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Đại cương", "Cơ sở ngành", "Chuyên ngành bắt buộc", "Chuyên ngành tự chọn", "Môn học thay thế" }));
+        comboSubjectType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English Preparatory Programme", "F2G", "Supplementary Courses", "UoG" }));
+        comboSubjectType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboSubjectTypeActionPerformed(evt);
+            }
+        });
 
         btnEdit.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnEdit.setText("Cập nhật");
+        btnEdit.setText("SAVE");
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnCancel.setText("Hủy bỏ");
+        btnCancel.setText("CANCEL");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,7 +118,7 @@ public class EditSubjectDialog extends javax.swing.JDialog implements ActionList
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel2)
                                         .addComponent(jLabel3)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txtSubjectId)
                                     .addComponent(txtSubjectName)
@@ -148,6 +163,18 @@ public class EditSubjectDialog extends javax.swing.JDialog implements ActionList
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void comboSubjectTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSubjectTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboSubjectTypeActionPerformed
+
+    private void txtSubjectIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSubjectIdActionPerformed
+
+    private void txtSubjectNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSubjectNameActionPerformed
 
     /**
      * @param args the command line arguments

@@ -83,8 +83,8 @@
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="QU&#x1ea2;N L&#xdd; M&#xd4;N H&#x1ecc;C">
-                <Property name="tabTitle" type="java.lang.String" value="QU&#x1ea2;N L&#xdd; M&#xd4;N H&#x1ecc;C"/>
+              <JTabbedPaneConstraints tabName="MANAGE SUBJECT">
+                <Property name="tabTitle" type="java.lang.String" value="MANAGE SUBJECT"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -93,15 +93,12 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="18" max="32767" attributes="0"/>
+                              <Component id="jPanel6" min="-2" pref="594" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -147,7 +144,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="S&#x1eaf;p x&#x1ebf;p danh s&#xe1;ch m&#xf4;n h&#x1ecd;c">
+                    <TitledBorder title="Sort Subjects List">
                       <Font PropertyName="font" name="Tahoma" size="14" style="1"/>
                     </TitledBorder>
                   </Border>
@@ -168,7 +165,7 @@
                               <Component id="rbSortSubjectLessonDESC" min="-2" max="-2" attributes="0"/>
                               <Component id="rbSortSubjectLessonASC" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="34" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -196,7 +193,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo t&#xea;n a-z"/>
+                    <Property name="text" type="java.lang.String" value="By Subject Name a-z"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSortSubjectNameDESC">
@@ -204,7 +201,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo t&#xea;n z-a"/>
+                    <Property name="text" type="java.lang.String" value="By Subject Name z-a"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSortSubjectLessonASC">
@@ -212,7 +209,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo s&#x1ed1; ti&#x1ebf;t t&#x103;ng d&#x1ea7;n"/>
+                    <Property name="text" type="java.lang.String" value="By Slots increase"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSortSubjectLessonDESC">
@@ -220,7 +217,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo s&#x1ed1; ti&#x1ebf;t gi&#x1ea3;m d&#x1ea7;n"/>
+                    <Property name="text" type="java.lang.String" value="By Slots decrease"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -229,7 +226,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="T&#xec;m ki&#x1ebf;m m&#xf4;n h&#x1ecd;c">
+                    <TitledBorder title="Search Subjects">
                       <Font PropertyName="font" name="Tahoma" size="14" style="1"/>
                     </TitledBorder>
                   </Border>
@@ -259,7 +256,7 @@
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnSearchSubject" min="-2" pref="79" max="-2" attributes="0"/>
+                          <Component id="btnSearchSubject" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -299,7 +296,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo t&#xea;n g&#x1ea7;n &#x111;&#xfa;ng"/>
+                    <Property name="text" type="java.lang.String" value="By approximate Name"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSearchSubjectByNumOfLesson">
@@ -307,7 +304,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo s&#x1ed1; ti&#x1ebf;t h&#x1ecd;c"/>
+                    <Property name="text" type="java.lang.String" value="By number of Slots"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchSubjectByName">
@@ -322,7 +319,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="T&#xec;m"/>
+                    <Property name="text" type="java.lang.String" value="SEARCH"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchSubjectLessonFrom">
@@ -344,7 +341,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#x110;&#x1ebf;n: "/>
+                    <Property name="text" type="java.lang.String" value="To:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel2">
@@ -352,7 +349,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="T&#x1eeb;:  "/>
+                    <Property name="text" type="java.lang.String" value="From:"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -368,10 +365,10 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="0">
-                        <Column editable="false" title="M&#xe3; m&#xf4;n h&#x1ecd;c" type="java.lang.Object"/>
-                        <Column editable="false" title="T&#xea;n m&#xf4;n h&#x1ecd;c" type="java.lang.Object"/>
-                        <Column editable="false" title="T&#x1ed5;ng s&#x1ed1; ti&#x1ebf;t h&#x1ecd;c" type="java.lang.Object"/>
-                        <Column editable="false" title="Lo&#x1ea1;i m&#xf4;n h&#x1ecd;c" type="java.lang.Object"/>
+                        <Column editable="false" title="Subject Code" type="java.lang.Object"/>
+                        <Column editable="false" title="Subject Name" type="java.lang.Object"/>
+                        <Column editable="false" title="Total Slots" type="java.lang.Object"/>
+                        <Column editable="false" title="Programs" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -410,16 +407,19 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
+                <Property name="text" type="java.lang.String" value="REFRESH"/>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRefreshSubjectActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnAddNewSubject">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Th&#xea;m m&#xf4;n h&#x1ecd;c"/>
+                <Property name="text" type="java.lang.String" value="ADD SUBJECT"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnEditSubject">
@@ -427,7 +427,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="S&#x1eed;a m&#xf4;n h&#x1ecd;c"/>
+                <Property name="text" type="java.lang.String" value="UPDATE SUBJECT"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnRemoveSubject">
@@ -435,7 +435,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="X&#xf3;a m&#xf4;n h&#x1ecd;c"/>
+                <Property name="text" type="java.lang.String" value="DELETE SUBJECT"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -443,8 +443,8 @@
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="QU&#x1ea2;N L&#xdd; SINH VI&#xca;N">
-                <Property name="tabTitle" type="java.lang.String" value="QU&#x1ea2;N L&#xdd; SINH VI&#xca;N"/>
+              <JTabbedPaneConstraints tabName="MANAGE STUDENT">
+                <Property name="tabTitle" type="java.lang.String" value="MANAGE STUDENT"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -466,10 +466,10 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jPanel8" min="-2" pref="563" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jPanel8" min="-2" pref="582" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -504,7 +504,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="S&#x1eaf;p x&#x1ebf;p danh s&#xe1;ch sinh vi&#xea;n">
+                    <TitledBorder title="Sort Students List">
                       <Font PropertyName="font" name="Tahoma" size="14" style="1"/>
                     </TitledBorder>
                   </Border>
@@ -549,7 +549,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo t&#xea;n a-z"/>
+                    <Property name="text" type="java.lang.String" value="By Student Name a-z"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSortStudentNameDESC">
@@ -557,7 +557,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo t&#xea;n z-a"/>
+                    <Property name="text" type="java.lang.String" value="By Student Name z-a"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSortStudentIdASC">
@@ -565,7 +565,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo m&#xe3; sinh vi&#xea;n a-z"/>
+                    <Property name="text" type="java.lang.String" value="By Student ID a-z"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -574,7 +574,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="T&#xec;m ki&#x1ebf;m sinh vi&#xea;n">
+                    <TitledBorder title="Search Students">
                       <Font PropertyName="font" name="Tahoma" size="14" style="1"/>
                     </TitledBorder>
                   </Border>
@@ -587,25 +587,26 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="rbSearchStudentByMajor" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="comboMajor" min="-2" pref="276" max="-2" attributes="0"/>
-                                  <EmptySpace min="19" max="32767" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="rbSearchStudentId" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="rbSearchStudentByName" alignment="1" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="rbSearchStudentId" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="rbSearchStudentByName" alignment="1" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="rbSearchStudentByMajor" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="comboMajor" min="-2" pref="276" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="txtSearchStudentName" pref="273" max="32767" attributes="0"/>
                                       <Component id="txtSearchStudentById" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="btnSearchStudent" min="-2" pref="79" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                                  <Component id="btnSearchStudent" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -641,7 +642,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo t&#xea;n g&#x1ea7;n &#x111;&#xfa;ng"/>
+                    <Property name="text" type="java.lang.String" value="By approximate Name"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSearchStudentId">
@@ -649,7 +650,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo m&#xe3; sinh vi&#xea;n"/>
+                    <Property name="text" type="java.lang.String" value="By Student ID"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchStudentName">
@@ -664,7 +665,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="T&#xec;m"/>
+                    <Property name="text" type="java.lang.String" value="SEARCH"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchStudentById">
@@ -679,7 +680,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Theo chuy&#xea;n ng&#xe0;nh"/>
+                    <Property name="text" type="java.lang.String" value="By Program"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="comboMajor">
@@ -689,11 +690,11 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="5">
-                        <StringItem index="0" value="C&#xf4;ng ngh&#x1ec7; th&#xf4;ng tin"/>
-                        <StringItem index="1" value="&#x110;i&#x1ec7;n t&#x1eed;"/>
-                        <StringItem index="2" value="Vi&#x1ec5;n th&#xf4;ng"/>
-                        <StringItem index="3" value="Qu&#x1ea3;n tr&#x1ecb; kinh doanh"/>
-                        <StringItem index="4" value="Khoa h&#x1ecd;c d&#x1eef; li&#x1ec7;u"/>
+                        <StringItem index="0" value="Computer Science"/>
+                        <StringItem index="1" value="Graphic &amp; Digital Design"/>
+                        <StringItem index="2" value="Event Management"/>
+                        <StringItem index="3" value="Marketing"/>
+                        <StringItem index="4" value="Public Relations &amp; Communications"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -714,15 +715,15 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="9" rowCount="0">
-                        <Column editable="false" title="M&#xe3; sinh vi&#xea;n" type="java.lang.Object"/>
-                        <Column editable="false" title="H&#x1ecd; t&#xea;n" type="java.lang.Object"/>
-                        <Column editable="false" title="Ng&#xe0;y sinh" type="java.lang.Object"/>
-                        <Column editable="false" title="&#x110;&#x1ecb;a ch&#x1ec9;" type="java.lang.Object"/>
+                        <Column editable="false" title="Student ID" type="java.lang.Object"/>
+                        <Column editable="false" title="Full Name" type="java.lang.Object"/>
+                        <Column editable="false" title="Date of Birth" type="java.lang.Object"/>
+                        <Column editable="false" title="Address" type="java.lang.Object"/>
                         <Column editable="false" title="Email" type="java.lang.Object"/>
-                        <Column editable="false" title="S&#x1ed1; &#x111;i&#x1ec7;n tho&#x1ea1;i" type="java.lang.Object"/>
-                        <Column editable="false" title="L&#x1edb;p" type="java.lang.Object"/>
-                        <Column editable="false" title="Chuy&#xea;n ng&#xe0;nh" type="java.lang.Object"/>
-                        <Column editable="false" title="Ni&#xea;n kh&#xf3;a" type="java.lang.Object"/>
+                        <Column editable="false" title="Phone Number" type="java.lang.Object"/>
+                        <Column editable="false" title="Class" type="java.lang.Object"/>
+                        <Column editable="false" title="Major" type="java.lang.Object"/>
+                        <Column editable="false" title="Valid" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -786,7 +787,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
+                <Property name="text" type="java.lang.String" value="REFRESH"/>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>
               </Properties>
             </Component>
@@ -795,7 +796,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Th&#xea;m sinh vi&#xea;n"/>
+                <Property name="text" type="java.lang.String" value="ADD STUDENT"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnEditStudent">
@@ -803,7 +804,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="S&#x1eed;a sinh vi&#xea;n"/>
+                <Property name="text" type="java.lang.String" value="UPDATE STUDENT"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnRemoveStudent">
@@ -811,7 +812,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="X&#xf3;a sinh vi&#xea;n"/>
+                <Property name="text" type="java.lang.String" value="DELETE STUDENT"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -828,7 +829,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1085" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1144" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -850,7 +851,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1085" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1144" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">

@@ -50,7 +50,7 @@
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="63" max="32767" attributes="0"/>
+                              <EmptySpace pref="52" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="txtSubjectId" max="32767" attributes="0"/>
                                   <Component id="txtSubjectName" alignment="1" max="32767" attributes="0"/>
@@ -109,7 +109,7 @@
           <Font name="Tahoma" size="24" style="0"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Th&#xea;m m&#x1edb;i m&#xf4;n h&#x1ecd;c"/>
+        <Property name="text" type="java.lang.String" value="Add new subject"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -117,7 +117,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="M&#xe3; m&#xf4;n h&#x1ecd;c: "/>
+        <Property name="text" type="java.lang.String" value="SUBJECT CODE:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -125,7 +125,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="T&#xea;n m&#xf4;n h&#x1ecd;c: "/>
+        <Property name="text" type="java.lang.String" value="SUBJECT NAME:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -133,7 +133,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i m&#xf4;n h&#x1ecd;c: "/>
+        <Property name="text" type="java.lang.String" value="PROGRAM:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -141,16 +141,18 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="S&#x1ed1; ti&#x1ebf;t h&#x1ecd;c: "/>
+        <Property name="text" type="java.lang.String" value="SLOTS:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtSubjectId">
       <Properties>
-        <Property name="editable" type="boolean" value="false"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSubjectIdActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtSubjectName">
       <Properties>
@@ -158,6 +160,9 @@
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSubjectNameActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNumOfLesson">
       <Properties>
@@ -172,12 +177,11 @@
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
-            <StringItem index="0" value="&#x110;&#x1ea1;i c&#x1b0;&#x1a1;ng"/>
-            <StringItem index="1" value="C&#x1a1; s&#x1edf; ng&#xe0;nh"/>
-            <StringItem index="2" value="Chuy&#xea;n ng&#xe0;nh b&#x1eaf;t bu&#x1ed9;c"/>
-            <StringItem index="3" value="Chuy&#xea;n ng&#xe0;nh t&#x1ef1; ch&#x1ecd;n"/>
-            <StringItem index="4" value="M&#xf4;n h&#x1ecd;c thay th&#x1ebf;"/>
+          <StringArray count="4">
+            <StringItem index="0" value="English Preparatory Programme"/>
+            <StringItem index="1" value="F2G"/>
+            <StringItem index="2" value="Supplementary Courses"/>
+            <StringItem index="3" value="UoG"/>
           </StringArray>
         </Property>
       </Properties>
@@ -190,15 +194,18 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Th&#xea;m m&#x1edb;i"/>
+        <Property name="text" type="java.lang.String" value="ADD"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddNewActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnClear">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="X&#xf3;a d&#x1eef; li&#x1ec7;u"/>
+        <Property name="text" type="java.lang.String" value="CLEAR"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancel">
@@ -206,7 +213,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="H&#x1ee7;y b&#x1ecf;"/>
+        <Property name="text" type="java.lang.String" value="CANCEL"/>
       </Properties>
     </Component>
   </SubComponents>

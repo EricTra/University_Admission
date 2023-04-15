@@ -51,38 +51,52 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Thêm mới môn học");
+        jLabel1.setText("Add new subject");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Mã môn học: ");
+        jLabel2.setText("SUBJECT CODE:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Tên môn học: ");
+        jLabel3.setText("SUBJECT NAME:");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Loại môn học: ");
+        jLabel4.setText("PROGRAM:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Số tiết học: ");
+        jLabel5.setText("SLOTS:");
 
-        txtSubjectId.setEditable(false);
         txtSubjectId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSubjectId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSubjectIdActionPerformed(evt);
+            }
+        });
 
         txtSubjectName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSubjectName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSubjectNameActionPerformed(evt);
+            }
+        });
 
         txtNumOfLesson.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         comboSubjectType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        comboSubjectType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Đại cương", "Cơ sở ngành", "Chuyên ngành bắt buộc", "Chuyên ngành tự chọn", "Môn học thay thế" }));
+        comboSubjectType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English Preparatory Programme", "F2G", "Supplementary Courses", "UoG" }));
 
         btnAddNew.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnAddNew.setText("Thêm mới");
+        btnAddNew.setText("ADD");
+        btnAddNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddNewActionPerformed(evt);
+            }
+        });
 
         btnClear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnClear.setText("Xóa dữ liệu");
+        btnClear.setText("CLEAR");
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnCancel.setText("Hủy bỏ");
+        btnCancel.setText("CANCEL");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,7 +124,7 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel2)
                                         .addComponent(jLabel3)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txtSubjectId)
                                     .addComponent(txtSubjectName)
@@ -150,6 +164,18 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtSubjectIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSubjectIdActionPerformed
+
+    private void txtSubjectNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSubjectNameActionPerformed
+
+    private void btnAddNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddNewActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,10 +260,12 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
     }
 
     private void addNewSubject() {
+        
         var name = txtSubjectName.getText();
         var type = comboSubjectType.getSelectedItem().toString();
         var numOfLessonString = txtNumOfLesson.getText();
         if (!name.isEmpty() && !numOfLessonString.isEmpty()) {
+            
             subject.setName(name);
             subject.setKind(type);
             subject.setNumOfLesson(Integer.parseInt(numOfLessonString));
