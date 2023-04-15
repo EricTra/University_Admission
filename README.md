@@ -1,2 +1,2 @@
-# University_Admission
+# University Admission
  Manage Student of University
