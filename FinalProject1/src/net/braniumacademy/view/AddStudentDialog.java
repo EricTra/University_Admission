@@ -198,6 +198,11 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
 
         comboMajor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         comboMajor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Công nghệ thông tin", "Điện tử", "Viễn thông", "Quản trị kinh doanh", "Khoa học dữ liệu" }));
+        comboMajor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboMajorActionPerformed(evt);
+            }
+        });
 
         txtSchoolYear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -294,6 +299,10 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPersonDobActionPerformed
 
+    private void comboMajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMajorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboMajorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -305,7 +314,7 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
