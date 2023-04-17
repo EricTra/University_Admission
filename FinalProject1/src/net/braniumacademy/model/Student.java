@@ -84,6 +84,10 @@ public class Student extends Person {
         this.schoolYear = schoolYear;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
 public int hashCode() {
         int hash = 7;

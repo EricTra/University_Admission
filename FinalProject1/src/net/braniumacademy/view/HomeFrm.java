@@ -249,6 +249,11 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
 
         btnAddNewSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnAddNewSubject.setText("ADD SUBJECT");
+        btnAddNewSubject.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddNewSubjectActionPerformed(evt);
+            }
+        });
 
         btnEditSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnEditSubject.setText("UPDATE SUBJECT");
@@ -542,6 +547,10 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
     private void btnRefreshSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshSubjectActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRefreshSubjectActionPerformed
+
+    private void btnAddNewSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewSubjectActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddNewSubjectActionPerformed
 
     /**
      * @param args the command line arguments

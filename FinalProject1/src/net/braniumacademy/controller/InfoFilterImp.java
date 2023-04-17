@@ -14,7 +14,7 @@ public class InfoFilterImp implements InforFilter {
 
     @Override
     public boolean isStudentIdValid(String id) throws InvalidStudentIdException {
-        var regex = "^[a-zA-Z]{3}\\\\d{6}$";
+        var regex = "^[Gg][A-Za-z]{2}\\d{6}$";
         Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(id);
         if(matcher.matches()) {
