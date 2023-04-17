@@ -85,11 +85,12 @@ public class Student extends Person {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 79 * hash + Objects.hashCode(this.studentId);
-        return hash;
-    }
+public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + Objects.hashCode(this.studentId);
+    return hash;
+}
+
 
     @Override
     public boolean equals(Object obj) {

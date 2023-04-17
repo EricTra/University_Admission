@@ -43,7 +43,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="QU&#x1ea2;N L&#xdd; &#x110;&#x102;NG K&#xdd; M&#xd4;N H&#x1ecc;C"/>
+    <Property name="title" type="java.lang.String" value="University Admission"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>

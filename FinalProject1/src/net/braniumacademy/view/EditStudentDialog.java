@@ -104,6 +104,7 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Personal ID:");
 
+        txtPersonId.setEditable(false);
         txtPersonId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtPersonId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,12 +201,23 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Student ID:");
 
+        txtStudentId.setEditable(false);
         txtStudentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtStudentId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStudentIdActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Class:");
 
         txtStudentClass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtStudentClass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStudentClassActionPerformed(evt);
+            }
+        });
 
         comboMajor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         comboMajor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computer Science", "Graphic & Digital Design", "Event Management", "Marketing", "Public Relations & Communications" }));
@@ -312,6 +324,14 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void txtStudentClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStudentClassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStudentClassActionPerformed
+
+    private void txtStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStudentIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStudentIdActionPerformed
 
     /**
      * @param args the command line arguments

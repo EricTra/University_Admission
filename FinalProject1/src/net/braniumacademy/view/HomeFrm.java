@@ -105,7 +105,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("QUẢN LÝ ĐĂNG KÝ MÔN HỌC");
+        setTitle("University Admission");
         setResizable(false);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sort Subjects List", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
@@ -785,15 +785,17 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         }
     }
     
-    private void editSubjectId() {
+private void editSubjectId() {
         int maxId = Subject.getsId();
-        for (Subject subject : subjects) {
-            if (subject.getId() > maxId) {
-                maxId = subject.getId();
-            }
+    for (Subject subject : subjects) {
+        if (subject.getId() > maxId) {
+            maxId = subject.getId();
         }
-        Subject.setsId(maxId + 1);
     }
+        Subject.setsId(maxId + 1);
+}
+
+
     
     private void removeSubject() {
         int selectedIndex = tblSubject.getSelectedRow();

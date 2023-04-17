@@ -193,6 +193,11 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
         jLabel7.setText("Class:");
 
         txtStudentClass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtStudentClass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStudentClassActionPerformed(evt);
+            }
+        });
 
         comboMajor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         comboMajor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computer Science", "Graphic & Digital Design", "Event Management", "Marketing", "Public Relations & Communication", " " }));
@@ -203,6 +208,11 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
         });
 
         txtSchoolYear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSchoolYear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSchoolYearActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Major:");
@@ -300,6 +310,14 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
     private void comboMajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMajorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboMajorActionPerformed
+
+    private void txtStudentClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStudentClassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStudentClassActionPerformed
+
+    private void txtSchoolYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSchoolYearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSchoolYearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -405,7 +423,7 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
         txtSchoolYear.setText(emptyText);
     }
 
-    private void addNewStudent() {
+  private void addNewStudent() {
         var pId = txtPersonId.getText();
         var fullName = txtPersonName.getText();
         var dobStr = txtPersonDob.getText();
@@ -435,10 +453,10 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
                     showMessage(msg);
                 }
             } catch (InvalidStudentIdException ex) {
-                var msg = "Ví dụ mã hợp lệ: B25DCCN125";
+                var msg = "Ví dụ mã hợp lệ: GCD210340";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidPersonIdException ex) {
-                var msg = "Ví dụ mã hợp lệ: A2021123123";
+                var msg = "Ví dụ mã hợp lệ: 048203008232";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidEmailException ex) {
                 var msg = "Ví dụ email hợp lệ: example@gmail.com";
@@ -455,6 +473,7 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
             }
         }
     }
+
 
     private void showMessage(String msg) {
         JOptionPane.showMessageDialog(rootPane, msg);
