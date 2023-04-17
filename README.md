@@ -1,5 +1,5 @@
 # University Admission
- Manage Student of University
+ Manage Student of University - Greenwich University
 ## Version beta:
 - Have basic CRUD function for Student Management
 - Use Vietnamese
