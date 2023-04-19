@@ -4,7 +4,7 @@
 - Have basic CRUD function for Student Management
 - Use Vietnamese
 - Sort Student, Subject a - z, and either
-- Search Student, Subject follow name, code Student, Subject
+- ~~Search Student~~, Subject follow name, ~~code Student~~, Subject
 - Readfile, Print file in txt
 - **Demo beta**: 
 1. Subject Management:
@@ -15,7 +15,7 @@
 + Have basic CRUD function for Student Management
 + Use English
 + Sort Student, Subject a - z, Student ID and either
-+ Search Student, Subject follow name, code Student, Subject ID,..
++ ~~Search Student, Subject follow name, code Student~~, Subject ID,..
 + Readfile, Print file in txt
 ![image](https://user-images.githubusercontent.com/92014047/232236011-3ac39a2a-06a0-48bf-b31c-c6def801b746.png)
 ![image](https://user-images.githubusercontent.com/92014047/232236103-6da68fca-79d0-4fc6-8791-2f8bb321c1fc.png)
